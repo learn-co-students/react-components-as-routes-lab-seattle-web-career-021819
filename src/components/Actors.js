@@ -4,9 +4,23 @@ import { actors } from '../data';
 const Actors = () => {
   return (
     <div>
-      {/*{code here}*/}
+      <h1>Actors Page</h1>
+      {actors.map((aa, idx) => {
+        return (
+          <div>
+
+            {aa.name}
+
+            <ul>
+              {aa.movies.map(mm => {
+                return <li>{mm}</li>
+              })}
+            </ul>
+          </div>
+        )
+      })}
     </div>
-  );
-};
+  )
+}
 
 export default Actors;
